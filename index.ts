@@ -49,7 +49,7 @@ let is_locked = false;
 let alerts = (await fs.exists("alerts.json") ? JSON.parse(await fs.readFile("alerts.json", {encoding: "utf-8"})) : {});
 
 function buildPlacefile(): string {
-    if (Object.keys(alerts).length = 0) return "";
+    if (Object.keys(alerts).length == 0) return "";
     const features: IFeature[] = alerts.features;
 
     const opts: IPlacefileOptions = {
