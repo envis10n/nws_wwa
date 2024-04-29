@@ -54,8 +54,8 @@ function buildPlacefile(): string {
 
     const opts: IPlacefileOptions = {
         title: `NWS Active Warnings ${(new Date()).toISOString()}`,
-        refreshMs: 8 * 60 * 1000,
-        threshold: 999,
+        refreshMs: 3 * 60000,
+        threshold: 250,
         geometry: [],
     }
 
@@ -105,7 +105,7 @@ setInterval(() => {
     is_locked = true;
     loop().then(() => {
         last_write = Date.now();
-        last_cache = last_write + 3 * 60 * 1000;
+        last_cache = last_write + 2 * 60 * 1000;
         is_locked = false;
     });
 }, 0);
