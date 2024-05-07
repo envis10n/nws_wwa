@@ -64,7 +64,7 @@ let alerts = (await fs.exists("alerts.json"))
 function buildPlacefile(opt: Partial<IPlacefileOptions> = {}): string {
     const defaultOpts: IPlacefileOptions = {
         title: `NWS Active Warnings ${new Date().toISOString()}`,
-        refreshMs: 8 * 60 * 1000,
+        refreshMs: 3 * 60000,
         threshold: 999,
         geometry: [],
     };
