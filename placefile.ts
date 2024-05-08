@@ -38,7 +38,6 @@ export class Vec2 {
 export const COLOR_TABLE: {[key: string]: [number, number, number]} = {
     "Tornado Warning": [255, 0, 0],
     "Severe Thunderstorm Warning": [255, 255, 0],
-    "Tornado Emergency": [255, 0, 255],
     "Flood Warning": [0, 255, 0],
     "Special Weather Statement": [255, 255, 204],
 };

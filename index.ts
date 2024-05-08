@@ -32,7 +32,6 @@ interface IFeature {
         event:
             | "Tornado Warning"
             | "Severe Thunderstorm Warning"
-            | "Tornado Emergency"
             | "Tornado Watch"
             | "Severe Thunderstorm Watch"
             | "Special Weather Statement";
@@ -99,6 +98,8 @@ function buildPlacefile(opt: Partial<IPlacefileOptions> = {}): string {
             )
         )
             color = [255, 0, 100];
+        else if (feature.properties.description.includes("TORNADO EMERGENCY"))
+            color = [255, 0 , 255];
         if (color == undefined) color = [255, 255, 255];
         const line: Line = {
             type: "Line",
