@@ -70,7 +70,7 @@ function buildPlacefile(opt: Partial<IPlacefileOptions> = {}): string {
 
     const opts = Object.assign(defaultOpts, opt);
 
-    if ((Object.keys(alerts).length = 0)) return "";
+    if (Object.keys(alerts).length == 0) return "";
     const features: IFeature[] = alerts.features;
 
     for (const feature of features.filter((f) => f.geometry != null)) {
